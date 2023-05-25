@@ -3048,6 +3048,12 @@ Default value: `1048576` (1MB).
 Limits the size of incoming payloads to the specified byte count. Allowing very large payloads may
 cause the server to run out of memory.
 
+#### <a name="route.options.payload.maxParts" /> `route.options.payload.maxParts`
+
+Default value: `1000`.
+
+Limits the number of parts allowed in multipart payloads.
+
 #### <a name="route.options.payload.multipart" /> `route.options.payload.multipart`
 
 Default value: `false`.
@@ -3358,8 +3364,8 @@ following options:
 
 - `xss` - controls the 'X-XSS-Protection' header, where:
 
-    - `'disable'` - the header will be set to `'0'`.  This is the default value.
-    - `'enable'` - the header will be set to `'1; mode=block'`.
+    - `'disabled'` - the header will be set to `'0'`.  This is the default value.
+    - `'enabled'` - the header will be set to `'1; mode=block'`.
     - `false` - the header will be omitted.
 
     Note: when enabled, this setting can create a security vulnerabilities in versions of Internet Explorer
